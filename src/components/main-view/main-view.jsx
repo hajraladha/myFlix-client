@@ -6,7 +6,7 @@ export class MainView extends React.Component {
     super();
     this.state = {
       movies: [
-        { _id: 1, Title: 'Forest Gump', Description: 'Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.', Genre: 'Drama', Director: 'Robert Zemeckis', ImagePath: 'https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg'},
+        { _id: 1, Title: 'Forrest Gump', Description: 'Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.', Genre: 'Drama', Director: 'Robert Zemeckis', ImagePath: 'https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg'},
         { _id: 2, Title: 'The Shawshank Redemption', Description: 'It tells the story of banker, who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence.', Genre: 'Drama', Director: 'Frank Darabont', ImagePath: 'https://www.kingwiki.de/images/6/6a/Die_Verurteilten%28Film%29.jpg'},
         { _id: 3, Title: 'Gladiator', Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.', Genre:'Action', Director:"Ridley Scott", ImagePath: 'https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png'}
       ],
