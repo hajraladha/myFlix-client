@@ -25336,65 +25336,7 @@ class MainView extends _reactDefault.default.Component {
         }));
     }
 }
-// This function is what returns the visual representation of the component, in other words, it renders what will be displayed on the screen.                                             
-//   render() {
-//     const movies = this.state.movies;
-//     if (movies.length === 0){
-//       return <div className="main-view">The list is empty!</div>;
-//     } else {
-//       return (
-//         <div className="main-view">
-//           {movies.map((movie) => {          // The map() method in the code above maps through the movies array, for each element in an array
-//             return <div key={movie._id}>{movie.Title}</div>; //
-//           })}
-//         </div>
-//       );
-//     }
-//   }
-// }
-// export default MainView;
-render();
-const { movies , selectedMovie  } = undefined.state;
-if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-    className: "main-view",
-    __source: {
-        fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 64
-    },
-    __self: undefined,
-    children: "The list is empty!"
-}));
 exports.default = MainView;
-return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-    className: "main-view",
-    __source: {
-        fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 67
-    },
-    __self: undefined,
-    children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(MovieView, {
-        movie: selectedMovie,
-        onBackClick: (newSelectedMovie)=>{
-            undefined.setSelectedMovie(newSelectedMovie);
-        },
-        __source: {
-            fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 69
-        },
-        __self: undefined
-    }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
-            movie: movie,
-            onMovieClick: (movie1)=>{
-                undefined.setSelectedMovie(movie1);
-            },
-            __source: {
-                fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 71
-            },
-            __self: undefined
-        }, movie._id)
-    )
-}));
 
   $parcel$ReactRefreshHelpers$35bf.postlude(module);
 } finally {
