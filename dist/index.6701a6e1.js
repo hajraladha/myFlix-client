@@ -25263,7 +25263,7 @@ class MainView extends _reactDefault.default.Component {
             movies: [
                 {
                     _id: 1,
-                    Title: 'Forest Gump',
+                    Title: 'Forrest Gump',
                     Description: 'Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.',
                     Genre: 'Drama',
                     Director: 'Robert Zemeckis',
@@ -25364,6 +25364,8 @@ class MovieCard extends _reactDefault.default.Component {
         const { movie  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "movie-card",
+            onClick: ()=>this.props.onMovieClick(movie)
+            ,
             __source: {
                 fileName: "src/components/main-view/movie-card/movie-card.jsx",
                 lineNumber: 6
