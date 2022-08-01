@@ -25261,32 +25261,45 @@ class MainView extends _reactDefault.default.Component {
             movies: [
                 {
                     _id: 1,
-                    Title: 'Inception',
-                    Description: 'desc1...',
-                    ImagePath: '...'
+                    Title: 'Forest Gump',
+                    Description: 'Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.',
+                    Genre: 'Drama',
+                    Director: 'Robert Zemeckis',
+                    ImagePath: 'https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg'
                 },
                 {
                     _id: 2,
                     Title: 'The Shawshank Redemption',
-                    Description: 'desc2...',
-                    ImagePath: '...'
+                    Description: 'It tells the story of banker, who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence.',
+                    Genre: 'Drama',
+                    Director: 'Frank Darabont',
+                    ImagePath: 'https://www.kingwiki.de/images/6/6a/Die_Verurteilten%28Film%29.jpg'
                 },
                 {
                     _id: 3,
                     Title: 'Gladiator',
-                    Description: 'desc3...',
-                    ImagePath: '...'
+                    Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.',
+                    Genre: 'Action',
+                    Director: "Ridley Scott",
+                    ImagePath: 'https://upload.wikimedia.org/wikipedia/en/f/fb/Gladiator_%282000_film_poster%29.png'
                 }
-            ]
+            ],
+            selectedMovie: null
         };
     }
+    setSelectedMovie(newSelectedMovie) {
+        this.setState({
+            selectedMovie: newSelectedMovie
+        });
+    }
+    // Condensed code
     render() {
         const { movies , selectedMovie  } = this.state;
         if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 18
+                lineNumber: 27
             },
             __self: this,
             children: "The list is empty!"
@@ -25295,7 +25308,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 21
+                lineNumber: 30
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(MovieView, {
@@ -25305,7 +25318,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 23
+                    lineNumber: 32
                 },
                 __self: this
             }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -25315,7 +25328,7 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 25
+                        lineNumber: 34
                     },
                     __self: this
                 }, movie._id)
@@ -25323,7 +25336,65 @@ class MainView extends _reactDefault.default.Component {
         }));
     }
 }
+// This function is what returns the visual representation of the component, in other words, it renders what will be displayed on the screen.                                             
+//   render() {
+//     const movies = this.state.movies;
+//     if (movies.length === 0){
+//       return <div className="main-view">The list is empty!</div>;
+//     } else {
+//       return (
+//         <div className="main-view">
+//           {movies.map((movie) => {          // The map() method in the code above maps through the movies array, for each element in an array
+//             return <div key={movie._id}>{movie.Title}</div>; //
+//           })}
+//         </div>
+//       );
+//     }
+//   }
+// }
+// export default MainView;
+render();
+const { movies , selectedMovie  } = undefined.state;
+if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+    className: "main-view",
+    __source: {
+        fileName: "src/components/main-view/main-view.jsx",
+        lineNumber: 64
+    },
+    __self: undefined,
+    children: "The list is empty!"
+}));
 exports.default = MainView;
+return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+    className: "main-view",
+    __source: {
+        fileName: "src/components/main-view/main-view.jsx",
+        lineNumber: 67
+    },
+    __self: undefined,
+    children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(MovieView, {
+        movie: selectedMovie,
+        onBackClick: (newSelectedMovie)=>{
+            undefined.setSelectedMovie(newSelectedMovie);
+        },
+        __source: {
+            fileName: "src/components/main-view/main-view.jsx",
+            lineNumber: 69
+        },
+        __self: undefined
+    }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+            movie: movie,
+            onMovieClick: (movie1)=>{
+                undefined.setSelectedMovie(movie1);
+            },
+            __source: {
+                fileName: "src/components/main-view/main-view.jsx",
+                lineNumber: 71
+            },
+            __self: undefined
+        }, movie._id)
+    )
+}));
 
   $parcel$ReactRefreshHelpers$35bf.postlude(module);
 } finally {
